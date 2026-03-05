@@ -35,7 +35,7 @@ import android.util.Log;
  */
 public class BridgeLog {
 
-    private static final boolean UNITY_LOGGING_ENABLED = true;
+    private static final boolean UNITY_LOGGING_ENABLED = false;
     private static final String UNITY_GAME_OBJECT     = "AndroidLogReceiver";
     private static final String UNITY_METHOD           = "OnAndroidLog";
 
