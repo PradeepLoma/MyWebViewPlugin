@@ -255,13 +255,7 @@ public class CustomWebView extends WebView {
 
         @Override
         public void onReceivedSslError(WebView view, SslErrorHandler handler, android.net.http.SslError err) {
-            // Only proceed for untrusted-CA errors (e.g. self-signed dev certs).
-            // All other SSL errors are cancelled for security.
-            if (err.getPrimaryError() == android.net.http.SslError.SSL_UNTRUSTED) {
-                handler.proceed();
-            } else {
-                handler.cancel();
-            }
+            handler.cancel();
         }
     }
 
